@@ -12,7 +12,7 @@ module.exports = function(grunt){
 
         var output = "";
         files.forEach(function(pattern){
-            glob.sync(pattern).forEach(function(){
+            glob.sync(pattern).forEach(function(pathMatch){
                 var contents = fs.readFileSync(pathMatch).toString();
                 var compiled = compiler.precompile(input).toString();
                 output += "Ember.TEMPLATES['" + formatName(patchMatch) + "'] = Ember.Handlebars.template(" + compiled + ");";
