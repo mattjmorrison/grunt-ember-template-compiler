@@ -1,0 +1,33 @@
+{
+    "author": {
+        "name": "Matthew J. Morrison",
+        "email": "mattjmorrison@mattjmorrison.com"
+    },
+    "name": "grunt-ember-template-compiler",
+    "description": "An npm module for using ember-template-compiler with Grunt",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mattjmorrison/grunt-ember-template-compiler"
+    },
+    "keywords": [
+        "Ember.js",
+        "Handlebars.js",
+        "Grunt.js"
+    ],
+    "main": "./lib/main",
+    "bin": {
+        "grunt-ember-template-compiler": "./bin/compiler"
+    },
+    "engines": {
+        "node": ">=v0.8.1"
+    },
+    "licenses": [
+        "MIT"
+    ],
+    "dependencies": {
+        "glob": "*",
+        "mkdirp": "*",
+        "ember-template-compiler": "0.0.5"
+    }
+}
