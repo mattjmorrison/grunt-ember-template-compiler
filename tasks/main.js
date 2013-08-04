@@ -15,7 +15,7 @@ module.exports = function(grunt){
             glob.sync(pattern).forEach(function(pathMatch){
                 var contents = fs.readFileSync(pathMatch).toString();
                 var compiled = compiler.precompile(contents).toString();
-                output += "Ember.TEMPLATES['" + formatName(patchMatch) + "'] = Ember.Handlebars.template(" + compiled + ");";
+                output += "Ember.TEMPLATES['" + formatName(pathMatch) + "'] = Ember.Handlebars.template(" + compiled + ");";
             });
         });
 
