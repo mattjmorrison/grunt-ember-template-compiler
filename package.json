@@ -16,9 +16,6 @@
         "Grunt.js"
     ],
     "main": "./lib/main",
-    "bin": {
-        "grunt-ember-template-compiler": "./bin/compiler"
-    },
     "engines": {
         "node": ">=v0.8.1"
     },
