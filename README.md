@@ -33,3 +33,34 @@ emberhandlebars: {
   }
 }
 ```
+
+## MultiTask Usage Example:
+
+```js
+emberhandlebars: {
+  task_one: {
+    options: {
+      templateName: function(sourceFile){
+        var newSource = sourcefile.replace('src/one/templates/');
+        return newSource.replace('.handlebars');
+      }
+    },
+    files: [
+      'src/one/templates/*.handlebars'
+    ],
+    dest: 'src/one/templates.js'
+  },
+  task_two: {
+    options: {
+      templateName: function(sourceFile){
+        var newSource = sourcefile.replace('src/two/templates/');
+        return newSource.replace('.handlebars');
+      }
+    },
+    files: [
+      'src/two/templates/*.handlebars'
+    ],
+    dest: 'src/two/templates.js'
+  }
+}
+```
