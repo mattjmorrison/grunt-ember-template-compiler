@@ -5,10 +5,10 @@ module.exports = function(grunt){
     var compiler = require('ember-template-compiler');
     var dirname = require('path').dirname;
 
-    grunt.task.registerTask('emberhandlebars', 'Compile Ember Templates', function(){
-        var files = grunt.config('emberhandlebars.compile.files');
-        var dest = grunt.config('emberhandlebars.compile.dest');
-        var formatName = grunt.config('emberhandlebars.compile.options.templateName');
+    grunt.registerMultiTask('emberhandlebars', 'Compile Ember Templates', function(){
+        var files = this.data.files;
+        var dest = this.data.dest;
+        var formatName = this.data.options.templateName;
 
         var output = "";
         files.forEach(function(pattern){
