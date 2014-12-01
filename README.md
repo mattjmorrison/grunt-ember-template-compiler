@@ -22,8 +22,7 @@ emberhandlebars: {
   compile: {
     options: {
       templateName: function(sourceFile){
-        var newSource = sourcefile.replace('src/templates/');
-        return newSource.replace('.handlebars');
+        return sourceFile.replace('src/templates/', '').replace('.handlebars', '');
       }
     },
     files: [
@@ -40,9 +39,8 @@ emberhandlebars: {
 emberhandlebars: {
   task_one: {
     options: {
-      templateName: function(sourceFile){
-        var newSource = sourcefile.replace('src/one/templates/');
-        return newSource.replace('.handlebars');
+      templateName: function(sourceFile) {
+        return sourceFile.replace('src/one/templates/', '').replace('.handlebars', '');
       }
     },
     files: [
@@ -52,9 +50,8 @@ emberhandlebars: {
   },
   task_two: {
     options: {
-      templateName: function(sourceFile){
-        var newSource = sourcefile.replace('src/two/templates/');
-        return newSource.replace('.handlebars');
+      templateName: function(sourceFile) {
+        return sourceFile.replace('src/two/templates/', '').replace('.handlebars', '');
       }
     },
     files: [
