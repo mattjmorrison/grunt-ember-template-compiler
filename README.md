@@ -22,7 +22,7 @@ emberhandlebars: {
   compile: {
     options: {
       templateName: function(sourceFile){
-        var newSource = sourcefile.replace('src/templates/');
+        var newSource = sourceFile.replace('src/templates/');
         return newSource.replace('.handlebars');
       }
     },
@@ -53,7 +53,7 @@ emberhandlebars: {
   task_two: {
     options: {
       templateName: function(sourceFile){
-        var newSource = sourcefile.replace('src/two/templates/');
+        var newSource = sourceFile.replace('src/two/templates/');
         return newSource.replace('.handlebars');
       }
     },
